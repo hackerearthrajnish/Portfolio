@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <h4>{{project.title}}</h4>
+    <button class="btn-close" (click)="bsModalRef.hide()"></button>
+</div>
+
+<div class="modal-body">
+
+    <carousel>
+        <slide>
+            <img [src]='project.pictures[0]'
+                alt="first slide" class="slide-img">
+        </slide>
+        <slide>
+            <img [src]='project.pictures[1]'
+                alt="second slide" class="slide-img">
+        </slide>
+        <slide>
+    
+            <img [src]='project.pictures[2]'
+                alt="third slide" class="slide-img">
+        </slide>
+    </carousel>
+
+    <h3 class="mt-2">Description</h3>
+    <p>{{project.Description}}</p>
+
+    <p>Website Link : <a [href]="project.websiteLink" target="_blank">{{project.websiteLink}}</a></p>
+    <p>You can find this project on Github <a href="#" target="_blank">here</a></p>
+
+    <hr>
+    <div class="d-flex flex-wrap">
+        <div 
+        [style.background-color]="tag.color"
+        class="tag m-2" 
+        *ngFor="let tag of project.tags "
+        >{{tag}}</div>
+    </div>
+</div>
+

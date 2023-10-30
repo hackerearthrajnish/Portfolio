@@ -1,0 +1,13 @@
+.project-card{
+    max-width: 350px;
+}
+.tag{
+    background-color: blue;
+    padding:5px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.justify-manualy{
+    text-align: justify;
+}

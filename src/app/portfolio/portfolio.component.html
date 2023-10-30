@@ -1,0 +1,73 @@
+<div class="container">
+
+    <div class="m-2">
+        <div>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Filter
+            </button>
+            <button class="btn btn-outline-secondary ms-2" (click)="ResetFilter()">Reset</button>
+        </div>
+        <div id="collapseBasic" [collapse]="isCollapsed" class="mt-2">
+            <div class="border mb-2 shadow-sm " style="width: 250px;">
+
+                <form action="" (change)="Filter()">
+                    <div class="row mx-0">
+                        <div class="col">
+                            <small><b>Langauges:</b></small>
+                            <div class="from-group my-2">
+                                <div class="form-check">
+                                    <input type="checkbox" name="typescript" id="typescript"
+                                        class="form-check-input me-2" [(ngModel)]="model['TypeScript']">
+                                    <label for="typescript" class="form-check-label small">TypeScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="JavaScript" id="JavaScript"
+                                        class="form-check-input me-2" [(ngModel)]="model['JavaScript']">
+                                    <label for="JavaScript" class="form-check-label small">JavaScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="HTML" id="HTML"
+                                        class="form-check-input me-2" [(ngModel)]="model['HTML']">
+                                    <label for="HTML" class="form-check-label small">HTML</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="CSS" id="CSS"
+                                        class="form-check-input me-2" [(ngModel)]="model['CSS']">
+                                    <label for="CSS" class="form-check-label small">CSS</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <small><b>Frameworks :</b></small>
+                            <div class="from-group my-2">
+                                <div class="form-check">
+                                    <input type="checkbox" name="React" id="React"
+                                        class="form-check-input me-2" [(ngModel)]="model['React']">
+                                    <label for="React" class="form-check-label small">React</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="Angular" id="Angular"
+                                        class="form-check-input me-2" [(ngModel)]="model['Angular']">
+                                    <label for="Angular" class="form-check-label small">Angular</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="Nodejs" id="Nodejs"
+                                        class="form-check-input me-2" [(ngModel)]="model['NodeJS']">
+                                    <label for="Nodejs" class="form-check-label small">Node.js</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6" *ngFor="let project of ProjectData">
+            <app-project-card [Project]="project"></app-project-card>
+        </div>
+
+    </div>
+</div>

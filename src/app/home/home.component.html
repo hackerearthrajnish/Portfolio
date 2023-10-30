@@ -1,0 +1,54 @@
+<div class="container my-3">
+    <div class="row">
+        <!-- about me  -->
+        <div class="col-lg shadow border m-1 responsive">
+            <div>
+                <h2 class="headindg text-center">About Me</h2>
+                <div class="underline mb-2"></div>
+                <hr>
+                <div class="text-center">
+                    <img src="../../assets/newraj.png" alt="rajnish tripathi"
+                    class="rounded-circle img-fluid profile-img">
+                </div>
+                <p class="about-me mt-2"> <span class="text-danger">As a tech enthusiast </span>and a problem solver, I am constantly seeking new opportunities
+                    to explore and
+                    develop my skills. My passion for technology has driven me to work on various personal projects that
+                    have helped me to sharpen my technical skills and build my knowledge. I have also been able to
+                    showcase my skills by participating in coding contests, conducting coding events and quizzes, and
+                    organizing coding contests at the national level........
+
+                    .</p>
+                    <button class="btn btn-primary my-2" (click)="GoToAboutUs()">View More</button>
+            </div>
+        </div>
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2 class="headindg">Featured Projects</h2>
+                <div class="underline mb-3"></div>
+                <hr>    
+
+                <carousel>
+                    <slide>
+                        <img [src]='FeaturedProjects.pictures[0]'
+                            alt="first slide" class="slider-img ">
+                    </slide>
+                    <slide>
+                        <img [src]='FeaturedProjects.pictures[1]'
+                            alt="second slide" style="display: block; width: 100%; height: 250px;">
+                    </slide>
+                    <slide>
+                        <img [src]='FeaturedProjects.pictures[2]'
+                            alt="third slide" style="display: block; width: 100%;height: 250px;">
+                    </slide>
+                </carousel>
+                <hr>
+                <h5 class="text-danger fw-bold text-start ">{{FeaturedProjects.title}}</h5>
+                <div class="mt-2 text-start">
+                    <p class="summary">{{FeaturedProjects.summary}}</p>
+                </div>
+                <p class="text-start">Please <a routerLink="/portfolio">visit</a> Project section for more info !</p>
+            </div>
+        </div>
+    </div>
+</div>
+

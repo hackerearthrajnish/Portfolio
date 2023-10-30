@@ -1,0 +1,15 @@
+.profile-img{
+    width: 256px;
+    height: 250px;
+    float: left;
+    margin: 1em;
+}
+.about-me{
+    text-align: justify;
+}
+.underline{
+    height: 4px;
+    width: 100px;
+    background-color: #198754;
+    margin: auto;
+}

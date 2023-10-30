@@ -1,0 +1,17 @@
+
+<div class="card shadow text-center project-card m-2">
+    <div class="card-body">
+        <div class="card-title fw-bold">{{Project.title}}</div>
+        <div class="card-text my-2 justify-manualy" >{{Project.summary | slice :0:130}} ....</div>
+        <div class="btn btn-primary my-1" (click)="openModal()">View More</div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex flex-wrap justify-content-center">
+             <div 
+             [style.background-color]="tag.color"
+             class="tag m-2" 
+             *ngFor="let tag of Project.tags | slice : 0:2"
+             >{{tag}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");    
+
+.contact-img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.bg-color{
+    background-color:  #ecf0f3;
+}
+
+
+.underline{
+    height: 4px;
+    width: 180px;
+    background-color: #198754;
+    margin: auto;
+}
+.logo-btn{
+    background-color:  #fff;
+    border-radius: 50%;
+    padding: 8px 12px;
+}
+
+.logo-btn:hover{
+    scale: 1.2;
+    background-color: aqua;
+}
+
